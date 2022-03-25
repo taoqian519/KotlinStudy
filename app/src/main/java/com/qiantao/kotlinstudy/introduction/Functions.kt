@@ -31,11 +31,24 @@ class Functions {
         val claudia = Person("Claudia")
         sophia likes claudia
 
+        printAll("Hello", "Hallo", "Salut", "Hola", "你好")
+    }
+
+    fun printAllWithPrefix(vararg entries: String) {
+        printAll(*entries)
     }
 
     fun op() {
         operator fun Int.times(str: String) = str.repeat(this)
         println(2 * "Bye ")
+
+        operator fun String.get(range: IntRange) = substring(range)
+        val str = "Always forgive your enemies; nothing annoys them so much"
+        println(str[0..14])
+    }
+
+    fun printAll(vararg messges: String) {
+        for (m in messges) println(m)
     }
 
     class Person(val name: String) {
