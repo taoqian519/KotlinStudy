@@ -1,5 +1,7 @@
 package com.qiantao.kotlinstudy.introduction
 
+import com.qiantao.kotlinstudy.specialclasses.DoAuth
+
 
 open class Dog {
     open fun sayHello() {
